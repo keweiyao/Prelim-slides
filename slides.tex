@@ -66,11 +66,11 @@
     \refstepcounter{section}%
       \renewcommand\sectioncolor{%
       \ifcase\value{section}\or 
-      				blue!20\or 
-      				blue!20\or 
-      				red!20\or 
-      				blue!20\or 
-      				red!20\else 
+      				blue!30\or 
+      				blue!30\or 
+      				blue!30\or 
+      				red!30\or 
+      				yellow!30\else 
       				blue!20!\fi}
     \beamer@ifempty{#2}%
     {\long\def\secname{#1}\long\def\lastsection{#1}}%
@@ -121,6 +121,7 @@
 \begin{frame}{Ultra-relativistic heavy-ion collision}
 $\xrightarrow{\makebox[2cm]{Beam axis}}$
     \begin{figure}
+    \kern-1.5em
    	\begin{center}
 	\includegraphics[width=0.2\textwidth]{pics/new1.png} 
 	\includegraphics[width=0.2\textwidth]{pics/new50.png} 
@@ -130,25 +131,25 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
 	\end{center} 	
   	\end{figure}
   	\begin{center}
+  	\kern-1.5em
   	$\xrightarrow{\makebox[10cm]{Time evolution}}$
   	\end{center}
-
+  	\kern-1.5em
 \begin{itemize}
-\item Heavy nuclei are accelerated to nearly the speed of light and collide.
+\item Heavy nuclei (Au, Pb, U) are accelerated to nearly the speed of light and collide.
 \item Lorentz contraction in beam direction $\rightarrow$ pancake like nuclei.
 \item Extremely hot and dense system: $T > 300 \textrm{ MeV} \sim 10^{12} \textrm{ K}$. 
 \item Time scale $\sim 10^1 \textrm{ fm/c } (10^{-22} \textrm{ s})$, system size $< 10 \textrm{ fm } (10^{-14}\textrm{ m})$.
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Nuclear matter in extreme conditions and QGP}
+\begin{frame}{Nuclear matter in extreme conditions}
 \begin{itemize}
 \item Fundamental theory: Quantum Chromodynamics (QCD), describes motion of {\color{red}quarks} and {\color{red}gluons} that carry color charges.
-\item Asymptotic freedom at high energy $\rightarrow$ quarks and gluons.
-\item Low energy $\rightarrow$ quarks and gluons form bound states (hadrons).
-\item Hadrons	$\xrightarrow[\textrm{high } \rho]{\textrm{high } T}$ quark-gluon plasma (QGP)
+\item High energy: asymptotic freedom, DoF quarks and gluons.
+\item Low energy: confinement, {\color{red} $q,g$}s form bound states (hadrons).
+\item Phase transition? Hadrons	$\xrightarrow{\textrm{high } T, \rho}$ quark-gluon plasma (QGP)
 \end{itemize}
-
     \begin{figure}
    	\begin{center}
 	\includegraphics[width=0.35\textwidth]{pics/deconfine.png} 
@@ -156,33 +157,34 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
 	\includegraphics[width=0.35\textwidth]{pics/phase_diagram.jpg} 
 	\end{center} 	
   	\end{figure}
-
 \end{frame}
 
 \begin{frame}{QGP at RHIC and LHC}
 \begin{itemize}
-\item Relativistic Heavy-ion Collider (RHIC) at Brookhaven National Lab (BNL).
+\item Relativistic Heavy-ion Collider (RHIC) at Brookhaven National Lab.
 	\begin{itemize}
 	\item $7.7 - 200 A \textrm{ GeV}$.
-	\item Systems, Au+Au, U+U, Cu+Cu, p+Au, d+Au, ${}^3$He+Au ... 
+	\item Au+Au, U+U, Cu+Cu, p+Au, d+Au, ${}^3$He+Au, Cu+Au ...
 	\end{itemize}
 \item Large Hadron Collider (LHC) at the European Organization for Nuclear Research (CERN).
 	\begin{itemize}
 	\item Increase the energy to TeV regime.
-	\item Systems, Pb+Pb ($2.76 A, 5.02 A$ TeV), p+Pb ($5.02 A$ TeV).
+	\item Pb+Pb ($2.76 A, 5.02 A$ TeV), p+Pb ($5.02 A$ TeV).
 	\end{itemize}
 \item QGP is produced at both RHIC and LHC.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Astonishing properties of QGP: collective phenomena}
-\begin{itemize}
-\item Fluid behaviour: collective flows. \\Initial spatial anisotropy $\rightarrow$ final momentum anisotropy.
-\item Anisotropic flow: azimuthal modulation of momenta distribution.
+\begin{itemize} 
+\item Anisotropic flow: azimuthal modulation of particle emission.
 \begin{eqnarray}
+\nonumber
 \frac{\mathrm{d}N}{p_T\mathrm{d}p_T\mathrm{d}\phi} \propto 1 + 2{\color{red} v_2} \cos(2(\phi-\Psi_2)) + 2{\color{red}v_3} \cos(3(\phi-\Psi_3)) + ...
 \end{eqnarray}
+\item Fluid behaviour (collective flow): \\initial spatial anisotropy $\rightarrow$ final momentum anisotropy .
 \end{itemize}
+\kern-1.5em
 \begin{center}
 \begin{figure}
 \includegraphics[width=\textwidth]{./pics/nuclei-less.png}
@@ -192,10 +194,9 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
 
 \begin{frame}{Astonishing properties of QGP: perfect liquid}
 \begin{itemize}
-\item Collective behaviour is very well described by relativistic viscous hydrodynamics.
-(inputs: $\eta/s$, QCD equation of state.)
+\item System is well described by relativistic viscous hydrodynamics.
+\item Inputs: transport coefficients (shear viscosity over entropy ratio $\eta/s$), QCD equation of state.
 \item Viscous effect damps the development of momentum anisotropy.
-\item Larger $\eta/s$ $\rightarrow$ smaller final momentum space anisotropy, {\it vice versa}.
 \end{itemize}
 \begin{center}
 \begin{tikzpicture}
@@ -216,7 +217,7 @@ preaction={-triangle 90,thin,draw=blue!50,shorten >=-1mm,fill=blue!50}
 \begin{frame}{Astonishing properties of QGP: perfect liquid}
 \begin{itemize}
 \item Extract $\eta/s$ by comparing model calculation with experimental data.
-\item Extremely low $\eta/s \sim 0.08 - 0.20$, close to quantum lower bound of $\eta/s = \frac{1}{4\pi}$ $\rightarrow$ almost perfect liquid.
+\item Extremely low $\eta/s \sim 0.08 - 0.20$, close to quantum lower bound of $\eta/s = \frac{1}{4\pi}$ $\rightarrow$ almost perfect liquid. (PRL 106, 192301 (2011))
 \item \color{red}Large uncertainty from initial conditions.
 \end{itemize}
 \begin{center}
@@ -244,12 +245,14 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
   	\begin{center}
   	$\xrightarrow{\makebox[10cm]{Time evolution}}$
   	\end{center}
+\kern-1.5em
 \begin{center}
 \color{blue} Initial states $\rightarrow$  \color{red} QGP \color{blue}  $\rightarrow$ Hadronization $\rightarrow$ Final states interaction $\rightarrow$ Detector
 \end{center}
+\kern-1.5em
 \begin{itemize}
 \item Little control of the initial condition; complication from hadronization and final state interaction.
-\item Need a modelling of systems' full time evolution and extract QGP properties by model-to-data comparison.
+\item Need a modelling of full time evolution to extract QGP properties by model-to-data comparison.
 \end{itemize}
 \end{frame}
 
@@ -265,7 +268,7 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
   \begin{column}{0.75\textwidth}
   	\begin{itemize}
 	\item Initially far from thermal equilibrium.
-	\item Studies suggests fast thermalization proscess towards local thermal equilibrium ($< 1 \textrm{ fm/c}$).
+	\item Fast thermalization process towards local thermal equilibrium ($< 1 \textrm{ fm/c}$).
 	\item Mechanism not very well understood.
 \end{itemize}
   \end{column}
@@ -276,8 +279,8 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
     text width=14em, rounded corners, minimum height=6em]
 \begin{center}
 \begin{tikzpicture}
-  \node[block] (model1) at (-3, 0) {{\color{red} Dynamical models}: include pre-equilibrium dynamics; then match to local thermal equilibrium initial energy density.};
-  \node[block] (model2) at (3, 0) {{\color{red} Parametric models}: phenonmenolgical model that provide entropy / energy density at later time assuming local thermal equilibrium.};
+  \node[block] (model1) at (-3, 0) {{\color{red} Dynamical models}: \\ include pre-equilibrium dynamics.};
+  \node[block] (model2) at (3, 0) {{\color{red} Parametric models}: \\ phenonmenolgical models that provide entropy / energy density at later time ($\sim 0.6$ fm/c) assuming local thermal equilibrium.};
 \end{tikzpicture}
 \end{center}
 
@@ -296,12 +299,10 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
   \end{column}
   \begin{column}{0.8\textwidth}
   \begin{itemize}
-  	\item System closes to local thermal equilibrium.
-  	\item Energy momentum and charge conservation,
-  	\begin{eqnarray}
-  	{\partial}_\nu T^{\mu\nu} = 0, {\partial}_\nu N^{\nu} = 0.
-  	\end{eqnarray}
-  	\item Closed by QCD equation of state $\epsilon = \epsilon(p)$.
+  	\item System is close to local thermal equilibrium.
+  	\item Solve energy momentum and charge conservation equations,
+  	$\partial_\nu T^{\mu\nu} = 0, \partial_\mu N^\mu = 0.$
+  	\item Closed by QCD equation of state $p = p(\epsilon, n)$.
   \end{itemize}
   \end{column}
 \end{columns}
@@ -313,8 +314,8 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
 \begin{columns}[onlytextwidth]
   \begin{column}{0.85\textwidth}
   \begin{itemize}
-  	\item The expanding system becomes dilute and hydrodynamics ceases to apply. 
-  	\item Particlize energy density to hadrons.
+  	\item The expanding system becomes dilute and hydrodynamics ceases to apply $\rightarrow$ hadronic transport simulations. 
+  	\item Particlize to hadrons on isothermal hyper-surface.
   \end{itemize}
   \end{column}
   \begin{column}{0.2\textwidth}
@@ -329,7 +330,7 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
 \begin{center}
 \rule{11cm}{0.5pt}
 \end{center}
-\kern-2em
+\kern-1em
 \begin{columns}
  \begin{column}{0.15\textwidth}
     \begin{figure}
@@ -341,7 +342,8 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
   \begin{column}{0.85\textwidth}
   \begin{itemize}
   	\item System is still dense to allow hadronic scattering.
-	\item Solving Boltzmann transport equation of hadrons.
+	\item Solve Boltzmann transport equation of hadrons.
+	\item Ultra-relativistic Quantum Molecular Dynamics (UrQMD).
   \end{itemize}
   \end{column}
 \end{columns}
@@ -351,45 +353,47 @@ $\xrightarrow{\makebox[2cm]{Beam axis}}$
 %----------------------------------------------------------------
 
 %-----------------------3d IC------------------------------------
-\section{TRENTo initial condition model}
+\section{Useful concepts}
 \begin{frame}{Kinematics for fast expansion system}
 Define proper time $(\tau)$ and space-time rapidity $(\eta_s)$,
 \begin{eqnarray}
+\nonumber
 \tau = \sqrt{t^2 - z^2}, \eta_s = \frac{1}{2}\ln\frac{t+z}{t-z}. 
 \end{eqnarray}
 Final particle momenta, define rapidity $(y)$ or pseudo-rapidity $(\eta)$,
 \begin{eqnarray}
+\nonumber
  y = \frac{1}{2}\ln\frac{E+p_z}{E-p_z}, \eta &=& \frac{1}{2}\ln\frac{|\mathbf{p}|+p_z}{|\mathbf{p}|-p_z} = -\ln\left(\tan\frac{\theta}{2}\right). 
 \end{eqnarray}
 \begin{center}
 \begin{figure}
-\includegraphics[width=0.7\textwidth]{./pics/curv.png}
+\includegraphics[width=0.6\textwidth]{./pics/curv.png}
 \end{figure}
 \end{center}
 \end{frame}
 
 \begin{frame}{Boost-invariance approximation}
 \begin{itemize}
-\item Boost-invariance approximation: system is independent of $\eta_s$ or invariant by a shift in rapidity.
-\item Reduces 3+1 d hydrodynamics to 2+1 d, requires a 2d initial condition.
-\item A good approximation for large, symmetric collisions (Au+Au, Pb+Pb) within $-2 < \eta < 2$.
+\item Boost-invariance approximation: system is independent of $\eta_s$.
+\item Reduces 3+1 d hydrodynamics to 2+1 d with 2d initial condition.
+\item A good approximation for large, symmetric collisions (Au+Au, Pb+Pb) within $-2 < \eta < 2$ (mid-rapidity).
 \end{itemize}
 \begin{center}
 \begin{figure}
-\includegraphics[width=0.7\textwidth]{./pics/bi.png}
+\includegraphics[width=0.8\textwidth]{./pics/bi.png}
 \end{figure}
 \end{center}
 \end{frame}
 
+\section{TRENTo initial condition model}
 \begin{frame}{General structure of TRENTo IC}
-TRENTo (PRC.92.011901)\\
-An effective model of initial condition assuming boost invariance and provided initial 2d entropy density $s(x_\perp)$ at mid-rapidity ($\eta_s = 0$).
+TRENTo (PRC 92 011901 (2015)) is a parametric model of initial condition assuming boost-invariance. Provide initial 2d entropy density $s(x_\perp, \eta_s = 0)$ at mid-rapidity.
 \\
 TRENTo IC is developed in three layers:
 \begin{itemize}
-\item Glauber calculation of nucleon-nucleon collision.
-\item Determine the density of participant matter.
-\item Map participant density to mid-rapidity entropy deposition.
+\item Glauber calculation of inelastic nucleon-nucleon collision.
+\item Determine the densities of nuclei participant matter.
+\item Map participant densities to mid-rapidity entropy deposition.
 \end{itemize}
 \end{frame}
 
@@ -397,10 +401,13 @@ TRENTo IC is developed in three layers:
 \begin{itemize}
 \item Collision probability with impact parameter $b$,
 \begin{eqnarray}\label{dsigma_db}
+\nonumber
 		P_{\textrm{coll}}(b) &=& \frac{\mathrm{d}\sigma_{NN}}{2\pi b \mathrm{d}b} = 1 - \exp\left(-\alpha T_{pp} (b)\right). \\
+		\nonumber
 		T_{pp} &=& \int \mathrm{d}x_\perp \rho\left(x_\perp + \frac{b}{2}\right) \rho\left(x_\perp - \frac{b}{2}\right).
 \end{eqnarray}
 \end{itemize}
+\kern-2em
 \begin{columns}[onlytextwidth]
   \begin{column}{0.4\textwidth}
     \begin{figure}
@@ -411,9 +418,9 @@ TRENTo IC is developed in three layers:
   \end{column}
   \begin{column}{0.6\textwidth}
   \begin{itemize}
-  	\item Parameter $\alpha$ is tuned to match experimental cross-section $\sigma_{pp, \textrm{inel}}(\sqrt{s})$.
   	\item $T_{pp}(b)$: overlapping between two nucleons' density.
-  	\item Nucleon density modelled by normal distribution.
+  	\item Nucleon density is approximated by normal distribution.
+  	\item Parameter $\alpha$ is tuned to reproduce experimental cross-section $\sigma_{pp, \textrm{inel}}(\sqrt{s})$.
   \end{itemize}
   \end{column}
 \end{columns}
@@ -423,9 +430,9 @@ TRENTo IC is developed in three layers:
 \begin{columns}
 \begin{column}{0.7\textwidth}
 \begin{itemize}
-\item Nucleons are sampled from averaged nucleon distribution inside a nuclei.
+\item Sample nucleons from averaged nucleon distribution inside a nuclei.
 \item Check each pair of target/projectile nucleons for collision.
-Nucleons collides at least once are called participants.
+\item Participants: nucleons that collide.
 \end{itemize}
 \end{column}
 \begin{column}{0.3\textwidth}
@@ -436,12 +443,13 @@ Nucleons collides at least once are called participants.
 \end{figure}
 \end{column}
 \end{columns}
-
+\kern-2em
 \begin{columns}
 \begin{column}{\textwidth}
 \begin{itemize}
 \item Participant density of nuclei $A$ and $B$,
 \begin{eqnarray}
+\nonumber
 	T_{A,B}(x_\perp) = \sum_{i \in \textrm{Part} A,B} \gamma_i \rho(x_\perp- x_i), \gamma_i &\sim& \Gamma(k, k)
 \end{eqnarray}
 \item Additional $\Gamma$ fluctuation to correctly reproduce experimental $pp$ multiplicity fluctuation.
@@ -454,22 +462,16 @@ Nucleons collides at least once are called participants.
 
 \begin{frame}{2d entropy deposition ansatz at mid-rapidity}
 \begin{itemize}
-\item Mapping participant density to mid-rapidity entropy deposition,
-	\begin{equation}
-		\mathrm{d}S/\mathrm{d}\eta_s(x_\perp) \propto T_R(T_A, T_B; p) = \left(\left(T_A^p(x_\perp) + T_B^p(x_\perp)\right)/2\right)^{\frac{1}{p}}.
-	\end{equation}
-\item Mimic a variety of models at mid-rapidity (J. S. Moreland):
-\begin{center}
-\begin{tabular}{cccc}
-\hline 
-p $\sim$ & -0.67 & 0.0  & 1.0 \\ 
-\hline 
-model  & KLN   & EKRT & Glauber (participant scaling) \\ 
-\hline 
-\end{tabular} 
-\end{center}
-\item A model-to-data comparison (J. E. Bernhard) suggests $p \approx 0$.
+\item Map participant densities $T_A, T_B$ to mid-rapidity entropy deposition,
+\begin{eqnarray}
+\nonumber
+\mathrm{d}S/\mathrm{d}\eta_s(x_\perp, \eta_s = 0) \propto  \left[\left(T_A^p(x_\perp) + T_B^p(x_\perp)\right)/2\right]^{\frac{1}{p}}.
+\end{eqnarray}
+\item {\color{red} Mimic a variety of models at mid-rapidity} (J. S. Moreland).
+\item A model-to-data comparison (J. E. Bernhard) suggests $p \approx 0$,\\
+$\rightarrow$ EKRT / IP-Glasma (successful models at mid-rapidity).
 \end{itemize}
+\vspace{0.5em}
 \begin{center}
 \begin{figure}
 \includegraphics[width=\textwidth]{./pics/cgc_compare.pdf}
@@ -477,13 +479,12 @@ model  & KLN   & EKRT & Glauber (participant scaling) \\
 \end{center}
 \end{frame}
 
-\section{Rapidity dependent TRENTo initial condition model}
+\section{Extend TRENTo IC from 2d to 3d}
 \begin{frame}{3d IC motivation: QGP in small systems?}
 \begin{itemize}
-\item QGP was not expected in small system  d+Au, p+Pb
-$\rightarrow$ but similar collective phenomena observed.
+\item QGP was not expected in small systems  d+Au, p+Pb, ...; but exp. observed similar collective phenomena.
 \item QGP in small systems? Is hydrodynamics applicable?
-\item Boost-invariance is not a good approximation in asymmetry collision (d+Au, p+Pb). A rapidity dependent IC is demanding.
+\item Boost-invariance is not a good approximation in asymmetry collision (d+Au, p+Pb). \color{red} A rapidity dependent IC is demanding.
 \end{itemize}
 \begin{center}
 \begin{figure}
@@ -494,16 +495,21 @@ $\rightarrow$ but similar collective phenomena observed.
 
 \begin{frame}{3d IC motivation: effect of longitudinal fluctuation}
 \begin{itemize}
-\item Even in large system, boost-invariance only works for event-averaged distributions.
-\item Single events contain longitudinal fluctuations.
+\item Even in large systems, boost-invariance only works for event-averaged distributions.
+\item A single event contains local longitudinal fluctuations.
 \item Study fluctuation effects on the extraction of QGP properties.
 \end{itemize}
+\begin{center}
+\begin{figure}
+\includegraphics[width=\textwidth]{./pics/fluct-AA.png}
+\end{figure}
+\end{center}
 \end{frame}
 
 \begin{frame}{3d IC motivation: rapidity dependent observables}
 \begin{itemize}
 \item $\eta$ dependent observables could be sensitive to QGP properties and IC.
-\item E.g. pseudo-rapidity dependence of flows is sensitive to temperature dependence of $\eta/s$ (Gabriel Denicol, arXiv:1512.08231).
+\item $v_2(\eta)$ can be sensitive to temperature dependence of $\eta/s$ (arXiv:1512.08231).
 \end{itemize}
 \begin{center}
 \begin{figure}
@@ -513,34 +519,30 @@ $\rightarrow$ but similar collective phenomena observed.
 \end{center}
 \end{frame}
 
-\begin{frame}{Formula: from 2d to 3d}
-In TRENTo 2d:
+\begin{frame}{From 2d to 3d: formulae}
+TRENTo 3d:
 \begin{itemize}
-\item Glauber calculation of nucleon-nucleon collision.
-\item Determine the density of participant matter.
-\item Map participant density to mid-rapidity entropy deposition.
-\end{itemize}
-Toward TRENTo 3d:
-\begin{itemize}
-\item \color{red} Determine local rapidity profile from participant density.
+\item  Determine 3d entropy density from participant density.
 \begin{eqnarray}
-	T_A(x_\perp), T_B(x_\perp) &\rightarrow& T_R(x_\perp, \eta)
+\nonumber
+	T_A(x_\perp), T_B(x_\perp) &\rightarrow& s(x_\perp, \eta)
 \end{eqnarray}
 \item Simple and flexible $\rightarrow$ suitable for parametrize a variety of models.
 \item Preserve TRENTo 2d calculation at mid-rapidity.
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Formula: from 2d to 3d}
+\begin{frame}{From 2d to 3d: formulae}
 \begin{itemize}
 \item Factorize $\perp$ and $\parallel$ to reproduce mid-rapidity TRENTo result.
 \begin{eqnarray}
-	T_R(x_\perp, \eta) = T_R(x_\perp)f(x_\perp, \eta), f(x_\perp, 0) = 1.
+\nonumber
+s(x_\perp, \eta) = {\color{red}s(x_\perp, \eta = 0)}f(x_\perp, \eta), f(x_\perp, 0) = 1.
 \end{eqnarray}
-\item For flexibility, use no explicit form of $f$. $f((x_\perp), \eta)$ characterized by its cumulants,
+\item For flexibility, no use of explicit forms of $f$. \\$f(x_\perp, \eta)$ characterized by its first few cumulants,
 
 \begin{center}
-\begin{tabular}{c|c|c|c}
+\begin{tabular}{cccc}
 \hline
 	mean	 	&	std   	&	skewness		&	kurtosis		\\
 \hline
@@ -551,7 +553,8 @@ Toward TRENTo 3d:
 
 \item Reconstruct $ f(\eta) $ by $\mathscr{F}^{-1}$ cumulant generating function:
 \begin{eqnarray}\label{naive_fourier}
-	 \mathscr{F}^{-1}\exp\left(i \mu k - \frac{\sigma^2}{2}k^2 + i \gamma k^3 - \kappa k^4 \right)
+\nonumber
+\mathscr{F}^{-1}\exp\left(i \mu k - \frac{\sigma^2}{2}k^2 + i \gamma k^3 - \kappa k^4 \right)
 \end{eqnarray}
 \end{itemize}
 \end{frame}
@@ -560,29 +563,32 @@ Toward TRENTo 3d:
 \begin{itemize}
 \item Existing parametrizations (Piotr Bozek, arXiv:1002.4999),\\
 Shifted: $f(\eta_s) \rightarrow f(\eta_s - \mu)$;  tilted: $f(\eta_s) \rightarrow f(\eta_s) \left(1 + \gamma\eta_s/y_{\textrm{beam}}\right)$.
-\item $\mu$ and $\gamma$ measures the local asymmetry of participant density.
+\item $\mu$ and $\gamma$ measures the local asymmetry of participant densities.
 \end{itemize}
 \begin{center} 
-\begin{figure}
-\includegraphics[width=0.6\textwidth]{pics/Pitor.png} 
-\end{figure}
 \begin{tabular}{c|c|c|c|c}
 \hline
---	&	$\mu$	& $\sigma$ & $\gamma$ & $\kappa$	\\
+	&	$\mu$	& $\sigma$ & $\gamma$ & $\kappa$	\\
 \hline
-shifted & $\frac{1}{2}\log\left(\frac{T_A}{T_B}\right)$ & const. & $0$	& const. \\
-tilted & $0$ & const. & $\frac{T_A-T_B}{T_A+T_B}, T_A - T_B, etc$	& const.\\
-general & $\frac{a}{2}\log\left(\frac{T_A}{T_B}\right)$ & $b$ & $c(T_A - T_B)$ & $d$ \\
+shifted & $\frac{1}{2}\log\left(T_A/T_B\right)$ & const. & $0$	& const. \\
+tilted & $0$ & const. & $\frac{T_A-T_B}{T_A+T_B}, T_A - T_B, ...$	& const.\\
+general & $\frac{a}{2}\log\left(T_A/T_B\right)$ & $b$ & $c(T_A - T_B)$ & $d$ \\
 \hline
 \end{tabular}
+\kern-2.5em
+\begin{figure}
+\includegraphics[width=0.7\textwidth]{pics/schemes.png} 
+\end{figure}
 \end{center}
 \end{frame}
 
-\begin{frame}{Sample 3d events}
+\begin{frame}{Sample 3d events for Pb+Pb and p+Pb}
 \begin{itemize}
-\item Strong local longitudinal fluctuation in Pb+Pb collisions.
-\item Asymmetric rapidity profile for pPb collisions.
+\item Fluctuations of entropy deposition in X-Y plane comes from randomized nucleon position.
+\item Strong local longitudinal fluctuations in Pb+Pb collisions.
+\item Asymmetric $\mathrm{d}S/\mathrm{d}\eta_s$ for pPb collisions.
 \end{itemize}
+\kern-0.8em
 \begin{figure}
 \begin{center}
 \includegraphics[width = 0.8\textwidth]{./pics/3d-example.png}
@@ -593,23 +599,24 @@ general & $\frac{a}{2}\log\left(\frac{T_A}{T_B}\right)$ & $b$ & $c(T_A - T_B)$ &
 %----------------------------------------------------------------
 
 %-----------------------Model-to-data Comparison-----------------
-\section{Inference of IC parameters from model-to-data comparison}
+\section{Infer 3d-IC parameters by model-to-data comparison}
 \begin{frame}{IC directly against experiment}
 \begin{itemize}
 \item Time evolution (3+1 D hydrodynamics) is computationally expensive.
-\item First compare 3d initial condition model with observables not sensitive to time-evolution $\rightarrow$ crude inference of IC parameters.
+\item First, compare 3d initial condition model to observables that are not sensitive to time-evolution $\rightarrow$ crude inference of IC parameters.
 \item Charged particle pseudo-rapidity distribution works well,
-	\begin{eqnarray}
-		\mathrm{d}N_{\textrm{ch}}/\mathrm{d}\eta \propto \mathrm{d}s/\mathrm{d}\eta_s
-	\end{eqnarray}
-	Can be checked later.
+\begin{eqnarray}
+\nonumber
+\mathrm{d}N_{\textrm{ch}}/\mathrm{d}\eta \propto \mathrm{d}S/\mathrm{d}\eta_s
+\end{eqnarray}
+The validity of this approximation can be checked later.
 \end{itemize}
-Tools: model-to-data comparison by Bayesian analysis.
+\color{red} Tools: model-to-data comparison by Bayesian analysis.
 \end{frame}
 
 \begin{frame}{Parameter design: Latin-hypercube sampling}
 \begin{itemize}
-\item 3d initial condition introduces about 4-5 more parameters. A high dimensional parameter space:
+\item Design parameter set samples from a high dimensional parameter space:
 \begin{center}
 \begin{tabular}{ccccccc}
 \hline
@@ -620,21 +627,25 @@ $[1,4]$ & $[8,12]$ & $[0,2]$ & $[2,4]$ & $[0, 0.5]$ & $[0.2, 0.8]$ & $[0.6, 0.8]
 \hline
 \end{tabular}
 \end{center}
-\item Latin-hypercube sampling: \\Monte-Carlo sampling of parameter points $x_i$ from $[0, 1]^d$.
-\item Avoid over populated / sparse regions, $N_{\textrm{samples}} \propto d$.
+\item Latin-hypercube sampling: \\ Avoid over populated / sparse regions, $N_{\textrm{samples}} \propto d$.
 \item Compute model output $y_i$ on design parameter sets $x_i$,
 \begin{eqnarray}
-	x_i \xrightarrow{Model} y_i.
+\nonumber
+x_i &\xrightarrow{\textrm{Model}}& y_i,\\
+\nonumber
+(k, N, a, b, c, d, J) &\xrightarrow{\textrm{TRENTo-3d}}& (\mathrm{d}N/\mathrm{d}\eta_1, \mathrm{d}N/\mathrm{d}\eta_2, ..).
 \end{eqnarray}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Gaussian process emulator: interpolate over design point}
+\begin{frame}{Gaussian process emulators: interpolate over design points}
 \begin{itemize}
-\item Gaussian process: a set of random variables, any finite number of which have a joint Gaussian distribution.
-\item Draw random functions specified by the mean and covariance,
+\item Gaussian process (GP): a set of random variables $y$, labelled by $x$. \\
+ Any finite number $y(x)$ have a joint Gaussian distribution.
+\item  GP draws random functions by specifying mean $(=0)$ and covariance,
 \begin{eqnarray}
-\Sigma(x_1, x_2) = \sigma^2 \exp\left(-\frac{\left(x_1 - x_2\right)^2}{2l^2}\right)
+\nonumber
+\left\langle y(x_1) y(x_2)\right\rangle = \Sigma(x_1, x_2) = \sigma^2 \exp\left(-\frac{\left(x_1 - x_2\right)^2}{2l^2}\right)
 \end{eqnarray}
 \end{itemize}
 \begin{center}
@@ -645,11 +656,14 @@ $[1,4]$ & $[8,12]$ & $[0,2]$ & $[2,4]$ & $[0, 0.5]$ & $[0.2, 0.8]$ & $[0.6, 0.8]
 \end{center}
 \end{frame}
 
-\begin{frame}{Gaussian process emulators: interpolate over design point}
+\begin{frame}{Gaussian process emulators: interpolate over design points}
 \begin{itemize}
-\item Gaussian process emulator: a Gaussian process conditioned with input parameter sets $x_i$ and model outputs $y_i$.
-\item Make inference of model output with arbitrary parameter sets with likelihood.
-\item Gaussian process emulator is a fast surrogate for computationally intense model.
+\item Gaussian process emulator: a GP conditioned at parameter sets $x_i$ and model outputs $y_i$.
+\begin{center}
+$\Sigma'(x^*, x^*) = \Sigma(x^*, x^*) - \Sigma(x^*, x_i)\Sigma^{-1}(x_i, x_j)\Sigma(x_j, x^*)$
+\end{center}	
+\item Infer model output with arbitrary parameter sets $(x^*)$ with likelihood.
+\item Non-parametric interpolation over design points.
 \end{itemize}
 \begin{center}
 \begin{figure}
@@ -672,9 +686,10 @@ $[1,4]$ & $[8,12]$ & $[0,2]$ & $[2,4]$ & $[0, 0.5]$ & $[0.2, 0.8]$ & $[0.6, 0.8]
 \section{Results}
 \begin{frame}{Prior / posterior of model output}
 \begin{itemize}
-\item $\mathrm{d}N/\mathrm{d}\eta$ from parameters draw from priori / posterior distributions, comparing to Pb+Pb data @ $2.76A$ TeV. 
-\item The model can very well describes Pb+Pb data of different multiplicities.
+\item $\mathrm{d}N/\mathrm{d}\eta$ from parameters drawn from priori / posterior distributions, comparing to Pb+Pb data @ $2.76A$ TeV. 
+\item The model describes Pb+Pb data of different centralities.
 \end{itemize}
+\kern-1em
 \begin{figure}
 \begin{center}
 \includegraphics[width = \textwidth]{./pics/pri-post-PbPb.png}
@@ -684,9 +699,10 @@ $[1,4]$ & $[8,12]$ & $[0,2]$ & $[2,4]$ & $[0, 0.5]$ & $[0.2, 0.8]$ & $[0.6, 0.8]
 
 \begin{frame}{Prior / posterior of model output}
 \begin{itemize}
-\item $\mathrm{d}N/\mathrm{d}\eta$ from parameters draw from priori / posterior distributions, comparing to p+Pb data @ $5.02A$ TeV. 
-\item The model reproduces the asymmetry distribution of different multiplicities in small system.
+\item $\mathrm{d}N/\mathrm{d}\eta$ from parameters drawn from priori / posterior distributions, comparing to p+Pb data @ $5.02A$ TeV. 
+\item The model reproduces the asymmetry distribution of different centralities in small system.
 \end{itemize}
+\kern-1em
 \begin{figure}
 \begin{center}
 \includegraphics[width = \textwidth]{./pics/pri-post-pPb.png}
@@ -715,28 +731,21 @@ Observations:
 \item pPb sensitive to $k$.
 \item PbPb sensitive to $\sigma$.
 \item $\gamma, \mu$ correlation. 
-\item Favours $\mu = 1$, small $\gamma$,
+\item Favours $a \sim 0.5 - 1$,
 \begin{eqnarray}
-\mu \sim \frac{1}{2}\ln(\frac{T_A}{T_B}).
+\nonumber \mu \sim (0.5 - 1)\mu_{\textrm{com}}(x_\perp).
 \end{eqnarray}
 \end{itemize}
 \end{column}
 \end{columns}
 \end{frame}
 
-\begin{frame}{Marginalized posterior distribution of model parameters}
+\begin{frame}{Effect of hydrodynamic evolution and hadronic scattering}
 \begin{itemize}
-\item Compare TRENTo 3d initial condition with charged particle pseudo-rapidity distribution.
-\item Suggest a slightly tilted longitudinal entropy deposition with its mean around the CoM rapidity of incoming participant densities.
-\begin{eqnarray}
-\mu(x_\perp) \sim \frac{1}{2}\ln\left(\frac{T_A(x_\perp)}{T_B(x_\perp)}\right).
-\end{eqnarray}
-\end{itemize}
-\end{frame}
+\item Parameter sets around the maximum of posterior distribution \\
+$k = 3.0, a = 0.75, b = 2.8, c = 0.3, d = 0.2, J = 0.65$. \\
+$\rightarrow$ perform full-time evolution.
 
-\begin{frame}{Effect of hydrodynamic evolution and re-scattering}
-\begin{itemize}
-\item Parameter sets around the maximum of posterior distribution \\ $\rightarrow$ perform full-time evolution.
 \item Pseudo-critical temperature of EoS, $T_c = 0.154$ GeV.
 \item Switching temperature of particularization, $T_{\textrm{sw}} = 0.148$ GeV.
 \item Transport coefficients $\zeta/s = 0$, $\eta/s(T)$.
@@ -751,12 +760,12 @@ Observations:
 \begin{frame}{Charged particle distribution}
 \begin{itemize}
 \item The general agreement of $\mathrm{d}N_{ch}/\mathrm{d}\eta$ with experiment is robust against evolution.
-\item Validate the use of $\mathrm{d}N_{ch}\mathrm{d}\eta$ for model-to-data comparison for initial condition.
+\item Validate the use of $\mathrm{d}N_{ch}/\mathrm{d}\eta$ for model-to-data comparison for initial condition.
 \end{itemize}
 \begin{figure}
 \begin{center}
-\includegraphics[width = 0.5\textwidth]{./pics/RUN-1-PbPb-dNdy-eta.png}
-\includegraphics[width = 0.5\textwidth]{./pics/RUN-1-pPb-dNdy-eta.png}
+\includegraphics[width = 0.5\textwidth]{./pics/final-PbPb-dNdy.png}
+\includegraphics[width = 0.5\textwidth]{./pics/final-pPb-dNdy.png}
 \end{center}
 \end{figure}
 \end{frame}
@@ -774,14 +783,38 @@ Observations:
 %----------------------------------------------------------------
 
 %--------------------------Back up-------------------------------
-\begin{frame}[noframenumbering]{Back up: Flow observables from 3d IC + time evolution}
+\begin{frame}[noframenumbering]{Back up: flow observables from 3d IC + time evolution}
 \begin{figure}
 \begin{center}
-\includegraphics[width = 0.4\textwidth]{./pics/new-PbPb-vnm-p1.png}
-\includegraphics[width = 0.4\textwidth]{./pics/new-PbPb-vnm-eta-p1.png}\\
-\includegraphics[width = 0.4\textwidth]{./pics/RUN-1-PbPb-v1-eta.png}
+\includegraphics[width = 0.47\textwidth]{./pics/vmn-PbPb.png}
+\includegraphics[width = 0.53\textwidth]{./pics/v1-PbPb.png}
 \end{center}
 \end{figure}
+\end{frame}
+
+\begin{frame}[noframenumbering]{Back up: flow observables from 3d IC + time evolution}
+\begin{figure}
+\begin{center}
+\includegraphics[width = \textwidth]{./pics/v2-eta-PbPb.png}
+\end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}[noframenumbering]{Back up: ALICE experiments}
+\begin{center}
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{./pics/ALICE-detector.jpg}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}[noframenumbering]{Back up: Evidence of QGP}
+\begin{itemize}
+\item Elliptic flow.
+\item Jet quenching.
+\item Strangeness production.
+\item ...
+\end{itemize}
 \end{frame}
 
 \begin{frame}[noframenumbering]{Back up: higher order flow}
@@ -809,6 +842,101 @@ Observations:
 \end{figure}
 \end{frame}
 
+\begin{frame}[noframenumbering]{Back up: QCD, asymptotic freedom}
+\begin{itemize}
+\item QCD Lagrangian:
+\begin{eqnarray}
+\nonumber
+\mathcal{L}_{\textrm{QCD}} = \bar{\psi_i}\left(i\left(\gamma^\mu D_\mu\right)_{ij} - m\delta_{ij}\right)\psi_j - \frac{1}{4}G^a_{\mu\nu}G^{a, \mu\nu}.
+\end{eqnarray}
+\end{itemize}
+\kern-1.5em
+\begin{columns}[onlytextwidth]
+\begin{column}{0.55\textwidth}
+\begin{itemize}
+\item $\psi$ quark field.
+\item $G^a_{\mu\nu}$ gluon field tensor,
+\begin{eqnarray}
+\nonumber
+G^a_{\mu\nu} = \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + g f^{abc}A^b_\mu A^c_\nu.
+\end{eqnarray}
+\item $D_\mu$ covariant derivative,
+\begin{eqnarray}
+\nonumber
+\left(D_\mu\right)_{ij} = \partial_\mu \delta_{ij} - i g A^a_\mu t^a_{ij}.
+\end{eqnarray}
+\item $g$ coupling constant.
+\end{itemize}
+\end{column}
+
+\begin{column}{0.45\textwidth}
+\begin{center}
+\begin{figure}
+\includegraphics[width=0.8\columnwidth]{./pics/Running_coupling.jpg}
+\end{figure}
+\end{center}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[noframenumbering]{Back up: QCD EoS}
+\begin{itemize}
+\item QCD equation of state at zero $n_B$ (HotQCD collaboration).
+\end{itemize}
+\begin{center}
+\begin{figure}
+\includegraphics[width = 0.9\textwidth]{./pics/EoS.png}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}[noframenumbering]{Back up: 3+1 D relativistic viscous hydrodynamics - 1}
+\begin{itemize}
+\item Conserved currents,
+\begin{eqnarray}
+\nonumber
+\partial_\nu T^{\mu\nu} = 0, \partial_\nu N^{\nu} = 0.
+\end{eqnarray}
+\item Define flow velocity $u^\mu$, energy density $\epsilon$ of local-rest (Laudau) frame,
+\begin{eqnarray}
+\nonumber
+\epsilon u^\mu = T^{\mu}_{\nu} u^\nu.
+\end{eqnarray}
+\item Decomposition of $T^{\mu}_{\nu}$ and $N^{\nu}$ into equilibrium quantities ($\epsilon, p, n$) and deviations from local equilibrium $\pi^{\mu\nu}, \Pi, V^\mu$
+\begin{eqnarray}
+\nonumber
+T^{\mu}_{\nu} &=& \epsilon u^{\mu}u^\nu - (p+\Pi)\Delta^{\mu\nu} + \pi^{\mu\nu}, \\
+\nonumber
+N^{\mu} &=& nu^\mu + V^{\mu}.
+\end{eqnarray}
+\item Closed by EoS $p = p(\epsilon, n)$ from other calculation (Lattice QCD /  phenomenology models).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[noframenumbering]{Back up: 3+1 D relativistic viscous hydrodynamics - 2}
+\begin{itemize}
+\item Israel-Stewart relativistic hydrodynamics: shear stress tensor and bulk pressure are dynamical quantities (Iu. Karpenko, doi:10.1016/j.cpc.2014.07.010),
+\begin{eqnarray}
+\nonumber
+\left\langle u^\gamma \partial_{;\gamma} \pi^{\mu\nu} \right\rangle
+ &=& 
+ -\frac{\pi^{\mu\nu} - \pi^{\mu\nu}_{NS}}{\tau_\pi} - \frac{4}{3}\pi^{\mu\nu}\partial_{;\gamma}u^\gamma, \\
+ \nonumber
+  u^\gamma \partial_{;\gamma} \Pi
+ &=& 
+ -\frac{\Pi - \Pi_{NS}}{\tau_\Pi} - \frac{4}{3}\Pi\partial_{;\gamma}u^\gamma.
+\end{eqnarray}
+\item Relax to Naiver-Stokes case,
+\begin{eqnarray}
+\nonumber
+\pi^{\mu\nu}_{NS} &=& \eta(\Delta^{\mu\lambda}\partial_{;\lambda}u^\nu + \Delta^{\nu\lambda}\partial_{;\lambda}u^\mu ) - \frac{2}{3}\eta\Delta^{\mu\nu}\partial_{;\lambda}u^\lambda, \\
+\nonumber
+\Pi_{NS} &=& -\zeta\partial_{;\lambda}u^\lambda.
+\end{eqnarray}
+\end{itemize}
+\end{frame}
+
 \begin{frame}[noframenumbering]{Back up: isothermal hyper-surface}
 \begin{columns}[onlytextwidth]
   \begin{column}{0.2\textwidth}
@@ -829,7 +957,7 @@ Observations:
 \begin{columns}[onlytextwidth]
   \begin{column}{0.6\textwidth}
   \begin{itemize}
-	\item Particles are sampled from a constant temperature hyper-surface:
+	\item Particles are sampled from a isothermal hyper-surface:
 	\begin{eqnarray}
 	E\frac{\mathrm{d}N_i}{\mathrm{d}^3p} = \int_\Sigma f_i(x, p)p^\mu\mathrm{d}^3\sigma_\mu.
 	\end{eqnarray}
@@ -907,24 +1035,45 @@ Small & Large & \color{red}Large & \color{red}Small \\
 \end{frame}
 
 \begin{frame}[noframenumbering]{Back up: more on flow observables}
-\begin{columns}
- \begin{column}{0.5\textwidth}
+
+ 	\begin{center}
     \begin{figure}
-   	\begin{center}
-   	\includegraphics[width=0.8\textwidth]{pics/Gale-1.png}
-	\end{center} 	
+   	\includegraphics[width=0.5\textwidth]{pics/Gale-1.png}
+   	\includegraphics[width=0.5\textwidth]{pics/Gale-2.png}
   	\end{figure}
-  \end{column}
-  \begin{column}{0.5\textwidth}
-  	\begin{figure}
-   	\begin{center}
-   	\includegraphics[width=0.8\textwidth]{pics/Gale-2.png}
-	\end{center} 	
-  	\end{figure}
-  \end{column}
-\end{columns}
+  	\end{center} 
+
 \end{frame}
 
+\begin{frame}[noframenumbering]{Back up: KLN IC model}
+\begin{itemize}
+\item Saturation based IC model (PRC 71 054903 (2005)).
+\item Entropy -- Gluon multiplicity per unity rapidity:
+\begin{eqnarray}
+\nonumber
+\frac{\mathrm{d}N}{\mathrm{d}y} = \frac{K}{S} \frac{4\pi N_c \alpha_s}{N_c^2 - 1} \int_{0}^{\infty}\frac{\mathrm{d}p^2_t}{p^4_t} x_2 G_{A_2}(x_2, p^2_t) x_1 G_{A_1}(x_1, p^2_t).
+\end{eqnarray}
+\item Unintegrated gluon distribution with saturation phenomenon:
+\begin{eqnarray}
+\nonumber
+x G(x, p^2_t) = 
+\begin{cases}
+\frac{S}{\alpha_s(Q_s)}p_t^2(1-x)^4, & p_t < Q_s \\
+\frac{S}{\alpha_s(Q_s)}Q_s^2(1-x)^4, & p_t > Q_s
+\end{cases}
+\end{eqnarray}
+\item Local saturation scale,
+\begin{eqnarray}
+\nonumber
+Q_s^2(x_\perp, y) \propto T_A(x_\perp) \exp(\pm\bar{\lambda} y)
+\end{eqnarray} 
+\item Simplified to,
+\begin{eqnarray}
+\nonumber
+\frac{\mathrm{d}S}{\mathrm{d}y} \propto \frac{1}{\alpha_s(Q_s)} \left( 2 + \ln \frac{Q_{\textrm{max}}}{Q_{\textrm{min}}} \right).
+\end{eqnarray}
+\end{itemize}
+\end{frame}
 
 \begin{frame}[noframenumbering]{Back up: uncertainty in IC affects transport properties extraction}
 \begin{itemize}
@@ -956,6 +1105,7 @@ Small & Large & \color{red}Large & \color{red}Small \\
 \item The reconstructed function may not be well-behaved.
 \item To regulate (\ref{naive_fourier}) and result in well behaved function,
 \begin{eqnarray}
+\nonumber
  \gamma \rightarrow \gamma\exp\left(-\sigma^2k^2/2\right), \kappa \rightarrow \kappa\exp\left(-\sigma^2k^2/2\right). 
 \end{eqnarray}
 \end{itemize}
@@ -966,10 +1116,11 @@ Small & Large & \color{red}Large & \color{red}Small \\
 \end{center}
 \end{frame}
 
-\begin{frame}{Back up: Bayes' theorem}
+\begin{frame}[noframenumbering]{Back up: Bayes' theorem}
 \begin{itemize}
 \item Posterior probability distribution of parameters by Bayes' theorem.
 \begin{eqnarray}
+\nonumber
 P(x^* | \{\mathbf{x}_i, y_i\}, y_{\textrm{exp}} )
  \propto P(y_{\textrm{exp}}|\{\mathbf{x}_i, y_i\}, x^*) P(x^*).
 \end{eqnarray}
